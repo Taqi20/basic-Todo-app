@@ -3,7 +3,7 @@ import { useTodo } from '../contexts/TodoContext'
 
 function TodoItem({ todo }) {
 
-    const [ isStateEditable, setIsStateEditable ] = useState(false);
+    const [ isTodoEditable, setIsTodoEditable ] = useState(false);
     const [ todoMsg, setTodoMsg ] = useState(todo.todo);
     const { updatedTodo, deleteTodo, toggleComplete } = useTodo
 
@@ -13,7 +13,7 @@ function TodoItem({ todo }) {
     }
 
     const toggleCompleted = () => {
-        toggleComplete(todo)
+        toggleComplete(todo.id)
     }
 
     return (
