@@ -13,6 +13,7 @@ function TodoItem({ todo }) {
     }
 
     const toggleCompleted = () => {
+        // console.log("debugging toggle")
         toggleComplete(todo.id)
     }
 
